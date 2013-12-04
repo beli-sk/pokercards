@@ -9,6 +9,8 @@ Locations
 Poker Cards packages are available from Cheese shop (PyPI)
 at https://pypi.python.org/pypi/pokercards
 
+Documentation is available at http://pythonhosted.org/PokerCards/
+
 The `project page <https://github.com/beli-sk/pokercards>`_ is hosted on Github.
 
 If you've never worked with *git* or contributed to a project on Github,
