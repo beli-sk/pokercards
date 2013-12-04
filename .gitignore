@@ -1,0 +1,7 @@
+*.py[co]
+*.log
+.*.swp
+doc/build/
+dist/
+build/
+MANIFEST
