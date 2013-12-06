@@ -29,11 +29,35 @@ Manage game flow, betting rules, dealing cards, etc.
 
 import cards
 
+class Player(object):
+    def __init__(self, index=None):
+        self.index = index
+        self.all_in = False
+        self.bet = 0
+
+ACT_FOLD = 0
+ACT_CALL = 1 # check/call
+ACT_RAISE = 2 # bet/raise
+
 class BaseGame(object):
     """Base game class. No functionality, used only for subclassing."""
     pass
 
-class TexasGame(object):
-    """Iplements Texas Hold'em Poker variant"""
-    # TODO
-    pass
+
+class TexasGame(BaseGame):
+    """Implements Texas Hold'em Poker variant"""
+    def __init__(self, num_players, dealer, bigblind):
+        self.bigblind = bigblind
+        self.deck = Cards.Deck()
+        self.num_players = num_players
+        self.players = [Player(index=i) for i in xrange(self.num_players)]
+        self.com_cards = []
+        self.dealer = dealer
+        self.players[dealer].dealer = True
+        self.current_bet = 0 # current round bet (all players should call to this amount)
+        self.pot = 0
+        self.turn = dealer
+
+    def action(self, action, amount):
+        raise NotImplemented()
+        
