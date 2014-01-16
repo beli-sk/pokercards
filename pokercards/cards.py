@@ -364,7 +364,7 @@ class PokerHand(object):
             return
         # high card
         self.hand_rank = 0
-        self.hand_cards = cards[0]
+        self.hand_cards = [cards[0]]
         logger.debug("* high card: %s", f_list(self.hand_cards))
 
     def __str__(self):
