@@ -19,7 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Poker Cards.  If not, see <http://www.gnu.org/licenses/>.
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 suits = ['S', 'H', 'D', 'C']
 ranks = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2']
