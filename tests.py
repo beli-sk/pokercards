@@ -150,6 +150,13 @@ they should be evaluated. Ordered in descending strength."""
                 'hand_rank': 2, 
                 'hand_cards': cards.Card.card_list('5D', '5S', 'KH', 'KC'),
                 'kickers': cards.Card.card_list('QS'),
+            },{
+                'hand': cards.PokerHand(
+                    cards.Card.card_list('5S', '4S', 'QD', 'AH', '8S')
+                    ),
+                'hand_rank': 0, 
+                'hand_cards': cards.Card.card_list('AH'),
+                'kickers': cards.Card.card_list('QD','8S','5S','4S'),
             }]
 
     def test_evaluation(self):
